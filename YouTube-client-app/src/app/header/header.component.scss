@@ -1,0 +1,21 @@
+.header{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: #a3a3a3;
+}
+
+.header-wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 100rem;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+
+}

@@ -1,0 +1,42 @@
+:host{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.search-wrapper{
+  flex-grow: 1;
+  flex-shrink: 1;
+  max-width: 100%;
+  width: 95rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.input{
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+input {
+  height: 3.2rem;
+  width: 100%;
+  border-radius: 1rem;
+  border: none;
+  padding: 1rem;
+  font-size: 1.4rem;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border: 0.1rem solid #181851;
+
+}
+
+input:focus::placeholder {
+  color: transparent;
+}

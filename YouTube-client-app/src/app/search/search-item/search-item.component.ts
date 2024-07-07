@@ -7,6 +7,4 @@ import { Component } from '@angular/core';
   templateUrl: './search-item.component.html',
   styleUrl: './search-item.component.scss',
 })
-export class SearchItemComponent {
-
-}
+export class SearchItemComponent {}
