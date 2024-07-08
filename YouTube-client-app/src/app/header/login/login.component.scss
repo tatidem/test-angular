@@ -2,19 +2,35 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
-  transition: filter 0.3s ease;
   height: 3.2rem;
-  width: 3.2rem;
+  width: 12rem;
   flex-shrink: 0;
+  font-size: 1.4rem;
+  gap: 0.5rem;
+}
+
+.login span{
+  width: fit-content;
+  font-size: 1.4rem;
 }
 
 .login-icon{
-  width: 100%;
-
+  height: 100%;
+  transition: filter 0.3s ease;
 }
 
 
 .login-icon:hover{
+  cursor: pointer;
   filter: brightness(0.8);
+}
+
+@media screen and (max-width: 768px) {
+  .login{
+    width: 3.2rem;
+  }
+
+  .login span{
+    display: none;
+  }
 }
