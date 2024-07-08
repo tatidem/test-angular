@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SearchItemComponent } from '../search-item/search-item.component';
 import { SearchService } from '../../services/http-client.service';
-// import { SearchItem } from '../search-item.model';
-// import { SearchResponse } from '../search-response.model';
+import { SearchItem } from '../search-item.model';
 
 @Component({
   selector: 'app-search-results',
@@ -14,10 +13,11 @@ import { SearchService } from '../../services/http-client.service';
   providers: [SearchService],
 })
 export class SearchResultsComponent {
-  // searchItems: SearchItem[] = [];
-  // constructor(private searchService: SearchService) {
-  //   this.searchService.getSearchResults().subscribe((data: SearchResponse) => {
-  //     this.searchItems = data.items;
-  //   });
-  // }
+  searchItems: SearchItem[] = [];
+
+  constructor(private searchService: SearchService) {
+    this.searchService.getSearchResults().subscribe((data) => {
+      this.searchItems = data.items;
+    });
+  }
 }

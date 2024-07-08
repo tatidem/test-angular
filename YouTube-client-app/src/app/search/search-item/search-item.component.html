@@ -1,1 +1,4 @@
-<p>search-item works!</p>
+@if (item) {
+  <div>{{ item.snippet.title }}</div>
+  <div>{{ item.statistics?.viewCount }}</div>
+}
