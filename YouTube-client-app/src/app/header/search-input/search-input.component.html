@@ -6,4 +6,8 @@
     (keyup.enter)="onSearch()"
   />
 </div>
-<app-button [buttonText]="'Search'" (clickEvent)="onSearch()"></app-button>
+<app-button
+  [buttonText]="'Search'"
+  (clickEvent)="onSearch()"
+  [disabled]="!searchValue.trim()"
+></app-button>

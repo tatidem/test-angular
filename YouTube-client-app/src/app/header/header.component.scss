@@ -12,13 +12,11 @@
 
 .header-wrapper{
   display: flex;
-  justify-content: start;
+  justify-content: space-between;
   align-items: center;
-  width: 95rem;
-  max-width: 80%;
+  width: 110rem;
+  max-width: 100%;
   gap: 1rem;
 }
 
-@media screen and (max-width: 768px) {
 
-}

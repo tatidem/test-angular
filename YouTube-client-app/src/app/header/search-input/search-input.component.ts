@@ -1,21 +1,24 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ButtonComponent } from '../../sharedUI/button/button.component';
+import { SearchQueryService } from '../../services/search.service';
 
 @Component({
   selector: 'app-search-input',
   standalone: true,
   imports: [ButtonComponent, FormsModule],
   templateUrl: './search-input.component.html',
-  styleUrl: './search-input.component.scss',
+  styleUrls: ['./search-input.component.scss'],
 })
 export class SearchInputComponent {
   searchValue: string = '';
 
-  @Output() searchEvent = new EventEmitter<string>();
+  constructor(private searchQueryService: SearchQueryService) {}
 
   onSearch() {
-    this.searchEvent.emit(this.searchValue);
-    console.log(this.searchValue);
+    if (this.searchValue.trim()) {
+      this.searchQueryService.updateSearchQuery(this.searchValue);
+      console.log(this.searchValue);
+    }
   }
 }
