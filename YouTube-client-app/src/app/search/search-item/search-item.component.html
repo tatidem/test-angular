@@ -1,4 +1,25 @@
 @if (item) {
-  <div>{{ item.snippet.title }}</div>
-  <div>{{ item.statistics?.viewCount }}</div>
+  <div class="search-item-wrapper">
+    <img [src]="item.snippet.thumbnails.high?.url" alt="thumbnails" />
+    <div class="statistics">
+      <div class="icon-wrapper">
+        <span class="material-icons">visibility</span>
+        <div class="count">{{ item.statistics?.viewCount }}</div>
+      </div>
+      <div class="icon-wrapper">
+        <span class="material-icons">thumb_up</span>
+        <div class="count">{{ item.statistics?.likeCount }}</div>
+      </div>
+      <div class="icon-wrapper">
+        <span class="material-icons">thumb_down</span>
+        <div class="count">{{ item.statistics?.dislikeCount }}</div>
+      </div>
+      <div class="icon-wrapper">
+        <span class="material-icons">comment</span>
+        <div class="count">{{ item.statistics?.commentCount }}</div>
+      </div>
+    </div>
+    <div class="title">{{ item.snippet.title }}</div>
+    <app-button [buttonText]="'More...'"></app-button>
+  </div>
 }

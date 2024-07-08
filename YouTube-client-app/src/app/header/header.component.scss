@@ -1,11 +1,12 @@
 :host{
-  min-width: 100vw;
+  width: 100%;
   display: flex;
-  justify-content: end;
+  justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding: 1.5rem;
+  // padding-right: calc(100vw - 100% + 1.5rem);
   background-color: #a3a3a3;
-  gap: calc(100% - 140rem);
+  gap: calc(100% - 190rem);
   position: relative;
 }
 
