@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ButtonComponent } from '../../../sharedUI/button/button.component';
+import { ButtonComponent } from '../../sharedUI/button/button.component';
 
 @Component({
   selector: 'app-search-input',

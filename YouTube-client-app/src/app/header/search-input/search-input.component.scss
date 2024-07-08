@@ -1,13 +1,5 @@
 :host{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-.search-wrapper{
-  flex-grow: 1;
-  flex-shrink: 1;
-  max-width: 100%;
+  max-width: 70%;
   width: 95rem;
   display: flex;
   justify-content: start;
@@ -17,6 +9,7 @@
 
 .input{
   flex-grow: 1;
+  flex-shrink: 1;
   max-width: 100%;
 }
 

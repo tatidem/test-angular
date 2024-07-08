@@ -1,17 +1,19 @@
-.header{
-  width: 100%;
+:host{
+  min-width: 100vw;
   display: flex;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
   padding: 1rem;
   background-color: #a3a3a3;
+  gap: calc(100% - 140rem);
+  position: relative;
 }
 
 .header-wrapper{
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
-  width: 100%;
+  width: 90%;
   max-width: 100rem;
   gap: 1rem;
 }

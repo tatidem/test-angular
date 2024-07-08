@@ -27,16 +27,24 @@
         "linebreak-style": 0,
         "no-console": "off",
         "import/prefer-default-export": "off",
-        // "import/first": "error",
-        // "import/newline-after-import": "error",
-        // "import/no-duplicates": "error",
-        // "simple-import-sort/imports": "error",
-        // "simple-import-sort/exports": "error",
-        // "unused-imports/no-unused-imports": "error",
-        "max-len": [
-            "error",
-            100
-        ],
+        "prettier/prettier": [
+      "error",
+      {
+        "trailingComma": "es5",
+        "endOfLine": "auto",
+        "tabWidth": 2,
+        "semi": true,
+        "singleQuote": true,
+        "printWidth": 100
+      },
+      {
+        "usePrettierrc": false
+      }
+    ],
+        // "max-len": [
+        //     "error",
+        //     100
+        // ],
         "@typescript-eslint/no-unused-vars": [
             "error",
             {
@@ -49,6 +57,7 @@
               "ignoreRestSiblings": true
             }
         ],
+        "import/no-extraneous-dependencies": "off",
         "no-use-before-define": "off",
         "no-nested-ternary": "off",
         "no-plusplus": "off",

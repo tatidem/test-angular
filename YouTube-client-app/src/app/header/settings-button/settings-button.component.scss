@@ -1,0 +1,20 @@
+.settings-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: filter 0.3s ease;
+  width: 4rem;
+  height: 4rem;
+  flex-shrink: 0;
+}
+
+.settings-icon{
+  width: 100%;
+  flex-shrink: 0;
+}
+
+
+.settings-icon:hover{
+  filter: brightness(0.8);
+}

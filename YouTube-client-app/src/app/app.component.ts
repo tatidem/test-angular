@@ -7,12 +7,7 @@ import { SearchResultsComponent } from './search/search-results/search-results.c
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [
-    RouterOutlet,
-    HeaderComponent,
-    SearchItemComponent,
-    SearchResultsComponent,
-  ],
+  imports: [RouterOutlet, HeaderComponent, SearchItemComponent, SearchResultsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
