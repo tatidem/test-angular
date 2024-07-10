@@ -1,0 +1,18 @@
+<div class="filters-block">
+  <div class="sort-by">Sort by:</div>
+  <div class="options" *ngFor="let option of options">
+    <input
+      type="radio"
+      [id]="option.value"
+      name="sortOption"
+      [value]="option.value"
+      [(ngModel)]="selectedOption"
+      (change)="onOptionChange()"
+    />
+    <label [for]="option.value">{{ option.label }}</label>
+    <div class="buttons">
+      <app-button-up [icon]="'arrow_drop_up'"></app-button-up>
+      <app-button-up [icon]="'arrow_drop_down'"></app-button-up>
+    </div>
+  </div>
+</div>
