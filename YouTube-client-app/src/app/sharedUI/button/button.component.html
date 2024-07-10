@@ -1,8 +1,6 @@
-<button [disabled]="disabled" (click)="onClick()">
+<button [class]="buttonClass" [disabled]="disabled" (click)="onClick()">
   <ng-container *ngIf="!buttonText; else textContent">
     <ng-content></ng-content>
   </ng-container>
-  <ng-template #textContent>
-    {{ buttonText }}
-  </ng-template>
+  <ng-template #textContent> {{ buttonText }} </ng-template>
 </button>

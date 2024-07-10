@@ -88,7 +88,16 @@
         "plugin:@angular-eslint/template/recommended",
         "plugin:@angular-eslint/template/accessibility"
       ],
-      "rules": {}
+      "rules": {
+        "prettier/prettier": ["error",
+        {
+          "endOfLine": "auto",
+          "tabWidth": 2,
+          "printWidth": 100,
+          "parser": "html"
+        }]
+
+      }
     }
   ]
 }

@@ -9,20 +9,32 @@
   gap: 0.5rem;
 }
 
-.login span{
+.name {
   width: fit-content;
   font-size: 1.4rem;
 }
 
-.login-icon{
-  height: 100%;
-  transition: filter 0.3s ease;
+button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1c4d81;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.05rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+    &:hover,
+    &:active{
+    background-color: #3f75ad;
+  }
 }
 
-
-.login-icon:hover{
-  cursor: pointer;
-  filter: brightness(0.8);
+.icon span{
+  font-size: 2.5rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -30,7 +42,8 @@
     width: 3.2rem;
   }
 
-  .login span{
+  .name{
     display: none;
   }
+
 }

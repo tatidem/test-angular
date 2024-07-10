@@ -1,32 +1,12 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { ButtonDropComponent } from '../sharedUI/button-up/button-drop.component';
+import { SortComponent } from './sort/filters-sort.component';
+import { KeyWordFilterComponent } from './key-word-filter/key-word-filter.component';
 
 @Component({
   selector: 'app-filters-block',
   standalone: true,
-  imports: [CommonModule, FormsModule, ButtonDropComponent],
+  imports: [SortComponent, KeyWordFilterComponent],
   templateUrl: './filters-block.component.html',
-  styleUrls: ['./filters-block.component.scss'],
+  styleUrl: './filters-block.component.scss',
 })
-export class FiltersBlockComponent {
-  options = [
-    { label: 'Date', value: 'date' },
-    { label: 'Views', value: 'views' },
-  ];
-
-  selectedOption: string = this.options[0].value;
-
-  onOptionChange() {
-    this.sortData();
-  }
-
-  sortData() {
-    if (this.selectedOption === 'date') {
-      console.log('Sorting by date');
-    } else if (this.selectedOption === 'views') {
-      console.log('Sorting by views');
-    }
-  }
-}
+export class FiltersBlockComponent {}
