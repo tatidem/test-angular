@@ -8,7 +8,7 @@ export class FilterService {
   private showFiltersBlock = new BehaviorSubject<boolean>(false);
 
   private sortCriteria = new BehaviorSubject<{ criteria: string; ascending: boolean }>({
-    criteria: 'date',
+    criteria: 'none',
     ascending: true,
   });
 
@@ -21,6 +21,7 @@ export class FilterService {
   }
 
   setSortCriteria(criteria: string, ascending: boolean) {
+    console.log('Setting sort criteria:', criteria, 'ascending:', ascending);
     this.sortCriteria.next({ criteria, ascending });
   }
 }

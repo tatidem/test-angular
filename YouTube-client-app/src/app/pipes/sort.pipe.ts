@@ -6,12 +6,17 @@ import { SearchItem } from '../search/search-item.model';
   standalone: true,
 })
 export class SortPipe implements PipeTransform {
-  transform(items: SearchItem[], criteria: string, ascending: boolean): SearchItem[] {
-    if (!items || !criteria) {
+  transform(
+    items: SearchItem[],
+    criteria: string,
+    ascending: boolean
+    // searchItemsSaved: SearchItem[]
+  ): SearchItem[] {
+    if (!items || !criteria || criteria === 'none') {
       return items;
     }
 
-    return items.sort((a, b) => {
+    return items.slice().sort((a, b) => {
       let comparison = 0;
       if (criteria === 'date') {
         comparison =

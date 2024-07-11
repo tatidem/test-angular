@@ -9,16 +9,18 @@
     (change)="onOptionChange()"
   />
   <label [for]="option.value">{{ option.label }}</label>
-  <div class="buttons">
+  <div class="buttons" *ngIf="option.value !== 'none'">
     <app-button-up
       [icon]="'arrow_drop_up'"
       (click)="toggleSortDirection()"
-      [className]="ascending ? 'active' : ''"
+      [className]="(ascending && selectedOption === option.value) ? 'active' : ''"
+      [disabled]="selectedOption !== option.value"
     ></app-button-up>
     <app-button-up
       [icon]="'arrow_drop_down'"
       (click)="toggleSortDirection()"
-      [className]="!ascending ? 'active' : ''"
+      [className]="(!ascending && selectedOption === option.value) ? 'active' : ''"
+      [disabled]="selectedOption !== option.value"
     ></app-button-up>
   </div>
 </div>

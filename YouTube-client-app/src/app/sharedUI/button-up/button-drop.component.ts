@@ -11,4 +11,6 @@ export class ButtonDropComponent {
   @Input() icon: string = '';
 
   @Input() className?: string;
+
+  @Input() disabled: boolean = false;
 }

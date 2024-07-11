@@ -18,7 +18,9 @@ import { FilterService } from '../../services/filter.service';
 export class SearchResultsComponent implements OnInit {
   searchItems: SearchItem[] = [];
 
-  sortCriteria: string = 'date';
+  searchItemsSaved: SearchItem[] = [];
+
+  sortCriteria: string = 'none';
 
   isAscending: boolean = true;
 
@@ -33,6 +35,7 @@ export class SearchResultsComponent implements OnInit {
       if (query) {
         this.searchService.getSearchResults().subscribe((data) => {
           this.searchItems = data.items;
+          this.searchItemsSaved = data.items.slice();
         });
       }
     });

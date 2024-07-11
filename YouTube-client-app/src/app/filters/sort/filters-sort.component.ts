@@ -13,6 +13,7 @@ import { FilterService } from '../../services/filter.service';
 })
 export class SortComponent {
   options = [
+    { label: 'None', value: 'none' },
     { label: 'Date', value: 'date' },
     { label: 'Views', value: 'views' },
   ];
