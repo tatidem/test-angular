@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ButtonDropComponent } from '../../sharedUI/button-up/button-drop.component';
+import { FilterService } from '../../services/filter.service';
 
 @Component({
   selector: 'app-sort-block',
@@ -18,15 +19,16 @@ export class SortComponent {
 
   selectedOption: string = this.options[0].value;
 
+  ascending: boolean = true;
+
+  constructor(private filterService: FilterService) {}
+
   onOptionChange() {
-    this.sortData();
+    this.filterService.setSortCriteria(this.selectedOption, this.ascending);
   }
 
-  sortData() {
-    if (this.selectedOption === 'date') {
-      console.log('Sorting by date');
-    } else if (this.selectedOption === 'views') {
-      console.log('Sorting by views');
-    }
+  toggleSortDirection() {
+    this.ascending = !this.ascending;
+    this.filterService.setSortCriteria(this.selectedOption, this.ascending);
   }
 }

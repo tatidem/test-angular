@@ -58,6 +58,7 @@
             }
         ],
         "import/no-extraneous-dependencies": "off",
+        "class-methods-use-this": "off",
         "no-use-before-define": "off",
         "no-nested-ternary": "off",
         "no-plusplus": "off",

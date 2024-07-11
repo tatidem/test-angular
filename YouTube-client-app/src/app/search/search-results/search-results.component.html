@@ -1,5 +1,5 @@
 <div class="search-results-grid">
-  <ng-container *ngFor="let item of searchItems">
+  <ng-container *ngFor="let item of (searchItems | sort:sortCriteria:isAscending)">
     <app-search-item [item]="item"></app-search-item>
   </ng-container>
 </div>

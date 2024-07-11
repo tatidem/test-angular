@@ -14,6 +14,8 @@ import { KeyWordFilterComponent } from './key-word-filter/key-word-filter.compon
 export class FiltersBlockComponent implements OnInit, OnDestroy {
   isVisible = false;
 
+  ascending = true;
+
   @HostBinding('class.hidden') get isHidden() {
     return !this.isVisible;
   }
@@ -30,5 +32,11 @@ export class FiltersBlockComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.subscription.unsubscribe();
+  }
+
+  onOptionChange() {}
+
+  toggleSortDirection() {
+    this.ascending = !this.ascending;
   }
 }

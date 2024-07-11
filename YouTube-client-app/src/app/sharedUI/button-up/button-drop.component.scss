@@ -14,8 +14,7 @@ button{
   color: #ffffff;
   cursor: pointer;
   transition: all 0.3s ease;
-    &:hover,
-    &:active{
+    &:hover{
     background-color: #3f75ad;
   }
 
@@ -24,4 +23,9 @@ button{
 .material-icons-outlined{
   font-size: 3rem;
 
+}
+
+.active{
+  background-color: #3f75ad;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
 }
