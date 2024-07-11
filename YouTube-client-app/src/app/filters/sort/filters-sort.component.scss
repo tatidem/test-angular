@@ -1,10 +1,7 @@
-
-
 :host {
   display: flex;
   justify-content: center;
   align-items: center;
-  // width: 100%;
   gap: 2rem;
 }
 
@@ -41,5 +38,22 @@ label {
   display: flex;
   gap: 0.2rem;
 
+}
+
+@media screen and (max-width: 768px) {
+  :host {
+    gap: 1.7rem;
+  }
+
+  label {
+    font-size: 1.4rem;
+  }
+
+  .options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+  }
 }
 

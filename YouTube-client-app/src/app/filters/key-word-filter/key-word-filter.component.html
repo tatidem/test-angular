@@ -1,2 +1,12 @@
 <div class="sort-by">by word or sentance:</div>
-<input type="text" [(ngModel)]="filterValue" (keyup.enter)="onSearch()" />
+<div class="input">
+  <input type="text" [(ngModel)]="filterValue" (keyup.enter)="onSearch()" />
+  <span
+    *ngIf="filterValue"
+    class="material-icons clear-icon"
+    (click)="clearFilter()"
+    (keyup.enter)="clearFilter()"
+    tabindex="0"
+    >clear</span
+  >
+</div>

@@ -6,11 +6,12 @@ import { SearchItem } from '../search-item.model';
 import { SortPipe } from '../../pipes/sort.pipe';
 import { SearchQueryService } from '../../services/search.service';
 import { FilterService } from '../../services/filter.service';
+import { FilterPipe } from '../../pipes/filter-key-word.pipe';
 
 @Component({
   selector: 'app-search-results',
   standalone: true,
-  imports: [SearchItemComponent, CommonModule, SortPipe],
+  imports: [SearchItemComponent, CommonModule, SortPipe, FilterPipe],
   templateUrl: './search-results.component.html',
   styleUrls: ['./search-results.component.scss'],
   providers: [SearchService],
@@ -18,11 +19,11 @@ import { FilterService } from '../../services/filter.service';
 export class SearchResultsComponent implements OnInit {
   searchItems: SearchItem[] = [];
 
-  searchItemsSaved: SearchItem[] = [];
-
   sortCriteria: string = 'none';
 
   isAscending: boolean = true;
+
+  filterValue: string = '';
 
   constructor(
     private searchService: SearchService,
@@ -35,7 +36,6 @@ export class SearchResultsComponent implements OnInit {
       if (query) {
         this.searchService.getSearchResults().subscribe((data) => {
           this.searchItems = data.items;
-          this.searchItemsSaved = data.items.slice();
         });
       }
     });
@@ -43,6 +43,10 @@ export class SearchResultsComponent implements OnInit {
     this.filterService.sortCriteria$.subscribe((criteria) => {
       this.sortCriteria = criteria.criteria;
       this.isAscending = criteria.ascending;
+    });
+
+    this.filterService.filterValue$.subscribe((value) => {
+      this.filterValue = value;
     });
   }
 }

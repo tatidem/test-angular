@@ -2,8 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  // width: 100%;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .sort-by {
@@ -14,6 +13,9 @@
   white-space: nowrap;
 }
 
+
 input{
   height: 2.8rem;
 }
+
+

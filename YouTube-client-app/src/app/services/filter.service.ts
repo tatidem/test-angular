@@ -12,16 +12,27 @@ export class FilterService {
     ascending: true,
   });
 
+  private filterValue = new BehaviorSubject<string>('');
+
   showFilters$ = this.showFiltersBlock.asObservable();
 
   sortCriteria$ = this.sortCriteria.asObservable();
+
+  filterValue$ = this.filterValue.asObservable();
 
   toggleFilters() {
     this.showFiltersBlock.next(!this.showFiltersBlock.value);
   }
 
   setSortCriteria(criteria: string, ascending: boolean) {
-    console.log('Setting sort criteria:', criteria, 'ascending:', ascending);
     this.sortCriteria.next({ criteria, ascending });
+  }
+
+  setFilterValue(value: string) {
+    this.filterValue.next(value);
+  }
+
+  resetFilterValue() {
+    this.filterValue.next('');
   }
 }
