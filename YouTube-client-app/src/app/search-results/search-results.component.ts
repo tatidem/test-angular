@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SearchItemComponent } from '../search-item/search-item.component';
-import { SearchService } from '../../services/http-client.service';
-import { SearchItem } from '../search-item.model';
-import { SortPipe } from '../../pipes/sort.pipe';
-import { SearchQueryService } from '../../services/search.service';
-import { FilterService } from '../../services/filter.service';
-import { FilterPipe } from '../../pipes/filter-key-word.pipe';
+import { SearchItemComponent } from './search-item/search-item.component';
+import { SearchService } from '../services/http-client.service';
+import { SearchItem } from './search-item.model';
+import { SortPipe } from '../pipes/sort.pipe';
+import { SearchQueryService } from '../services/search.service';
+import { FilterService } from '../services/filter.service';
+import { FilterPipe } from '../pipes/filter-key-word.pipe';
 
 @Component({
   selector: 'app-search-results',

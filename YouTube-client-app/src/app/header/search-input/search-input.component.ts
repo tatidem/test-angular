@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { ButtonComponent } from '../../sharedUI/button/button.component';
+import { ButtonComponent } from '../../shared/button/button.component';
 import { SearchQueryService } from '../../services/search.service';
 
 @Component({

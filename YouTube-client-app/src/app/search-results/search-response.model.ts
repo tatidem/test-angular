@@ -1,13 +1,10 @@
 import { SearchItem } from './search-item.model';
 
-export interface SearchResponse {
+export type SearchResponse = {
   kind: string;
   etag: string;
   pageInfo: PageInfo;
   items: SearchItem[];
-}
+};
 
-export interface PageInfo {
-  totalResults: number;
-  resultsPerPage: number;
-}
+export type PageInfo = Record<'totalResults' | 'resultsPerPage', number>;

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { SearchItem } from '../search/search-item.model';
+import { SearchItem } from '../search-results/search-item.model';
 
 @Injectable({ providedIn: 'root' })
 export class SearchService {
