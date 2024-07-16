@@ -7,4 +7,6 @@ export type SearchResponse = {
   items: SearchItem[];
 };
 
-export type PageInfo = Record<'totalResults' | 'resultsPerPage', number>;
+type PageInfoKeys = 'totalResults' | 'resultsPerPage';
+
+type PageInfo = Record<PageInfoKeys, string>;
