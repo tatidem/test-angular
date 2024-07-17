@@ -1,0 +1,29 @@
+button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1c4d81;
+  border: none;
+  border-radius: 0.5rem;
+  outline: none;
+  padding: 0.05rem;
+  width: 2rem;
+  height: 2rem;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+    &:hover{
+    background-color: #3f75ad;
+  }
+
+}
+
+.material-icons-outlined{
+  font-size: 3rem;
+
+}
+
+.active{
+  background-color: #3f75ad;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+}

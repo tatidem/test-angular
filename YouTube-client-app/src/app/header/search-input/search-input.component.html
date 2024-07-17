@@ -1,0 +1,21 @@
+<div class="input">
+  <input
+    type="text"
+    [(ngModel)]="searchValue"
+    placeholder="Search"
+    (keyup.enter)="onSearch()"
+  />
+  <span
+    *ngIf="searchValue"
+    class="material-icons clear-icon"
+    (click)="clearSearch()"
+    (keyup.enter)="clearSearch()"
+    tabindex="0"
+    >clear</span
+  >
+</div>
+<app-button
+  [buttonText]="'Search'"
+  (clickEvent)="onSearch()"
+  [disabled]="!searchValue.trim()"
+></app-button>

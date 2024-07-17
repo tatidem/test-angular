@@ -1,0 +1,22 @@
+:host{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  // padding-right: calc(100vw - 100% + 1.5rem);
+  background-color: #a3a3a3;
+  gap: calc(100% - 190rem);
+  position: relative;
+}
+
+.header-wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 110rem;
+  max-width: 100%;
+  gap: 1rem;
+}
+
+
